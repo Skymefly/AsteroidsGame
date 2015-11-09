@@ -12,15 +12,26 @@ class SpaceShip extends Floater
 {   
     //your code here
     public setX (int x) {myCenterX=x;}
-    public int getX() {return myX;}
+    public int getX() {return myCenterX;}
     public setY (int y) {myCenterY=y;}
-    public int getY() {return myY;}
+    public int getY() {return myCenterY;}
     public setDirectionX (double x) {myDirectionX=x;}
-    public double getDirectionX() {return myX;}
+    public double getDirectionX() {return myDirectionX;}
     public setDirectionY (double y) {myDirectionY=y;}
-    public double getDirectionY() {return myY;}
+    public double getDirectionY() {return myDirectionY;}
     public setPointDirection(int degrees) {myPointDirection=degrees;};   
     public double getPointDirection() {return myPointDirection}; 
+    int corners=3;
+    xCorners = new int[corners];
+    yCorners = new int[corners];
+    xCorners[0] = -8;
+    yCorners[0] = -8;
+    xCorners[1] = 16;
+    yCorners[1] = 0;
+    xCorners[2] = -8;
+    yCorners[2] = 8;
+    xCorners[3] = -2;
+    yCorners[3] = 0;
 }
 abstract class Floater //Do NOT modify the Floater class! Make changes in the SpaceShip class 
 {   
