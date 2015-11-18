@@ -11,20 +11,27 @@ public void draw()
 class SpaceShip extends Floater  
 {   
     //your code here
+    double degrees;
     SpaceShip() {
-      
+      int corners=3;
+      xCorners[0] = -8;
+      xCorners[1] = 16;
+      xCorners[2] = -8;
+      xCorners[3] = -2;
+      yCorners[0] = -8;
+      yCorners[1] = 0;
+      yCorners[2] = 8;
+      yCorners[3] = 0;
+      xCorners = new int[corners];
+      yCorners = new int[corners];
+      myColor=(255);
+      myCenterX=x;
+      myCenterY=y;
+      myDirectionX=x;
+      myDirectionY=y;
+      myPointDirection=degrees;
     }
-    int corners=3;
-    xCorners = new int[corners];
-    yCorners = new int[corners];
-    xCorners[0] = -8;
-    yCorners[0] = -8;
-    xCorners[1] = 16;
-    yCorners[1] = 0;
-    xCorners[2] = -8;
-    yCorners[2] = 8;
-    xCorners[3] = -2;
-    yCorners[3] = 0;
+    
     public setX (int x) {myCenterX=x;}
     public int getX() {return (int)myCenterX;}
     public setY (int y) {myCenterY=y;}
