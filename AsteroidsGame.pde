@@ -1,12 +1,14 @@
 //your variable declarations here
-
+SpaceShip Spa;
 public void setup() 
 {
   //your code here
+  Spa = new SpaceShip();
 }
 public void draw() 
 {
   //your code here
+  Spa.show();
 }
 class SpaceShip extends Floater  
 {   
@@ -40,8 +42,8 @@ class SpaceShip extends Floater
     public double getDirectionX() {return (double)myDirectionX;}
     public setDirectionY (double y) {myDirectionY=y;}
     public double getDirectionY() {return (double)myDirectionY;}
-    public setPointDirection(int degrees) {myPointDirection=degrees;};   
-    public double getPointDirection() {return (double)myPointDirection}; 
+    public setPointDirection(int degrees) {myPointDirection=degrees;} 
+    public double getPointDirection() {return (double)myPointDirection;}
 }
 abstract class Floater //Do NOT modify the Floater class! Make changes in the SpaceShip class 
 {   
