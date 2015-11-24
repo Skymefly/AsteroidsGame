@@ -1,5 +1,6 @@
 //your variable declarations here
 SpaceShip Spa;
+Star [] Stars;
 public void setup() 
 {
   //your code here
@@ -9,6 +10,23 @@ public void draw()
 {
   //your code here
   Spa.show();
+}
+public void KeyPressed()
+{
+
+}
+class Star()
+{
+  protected int StarX, StarY;
+  Star() {
+    StarX=Math.random()*400;
+    StarY=Math.random()*400;
+  }
+  public void show()
+  {
+    fill(255);
+    ellipse(StarX, StarY, 2, 2);
+  }
 }
 class SpaceShip extends Floater  
 {   
@@ -27,17 +45,17 @@ class SpaceShip extends Floater
       xCorners = new int[corners];
       yCorners = new int[corners];
       myColor=(255);
-      myCenterX=x;
-      myCenterY=y;
-      myDirectionX=x;
-      myDirectionY=y;
-      myPointDirection=degrees;
+      Floater.setCenterX(200);
+      Floater.setCenterY(200);
+      Floater.setDirectionX(0.0);
+      Floater.setDirectionY(0.0);
+      Floater.setPointDirection(0.0);
     }
     
-    public setX (int x) {myCenterX=x;}
-    public int getX() {return (int)myCenterX;}
-    public setY (int y) {myCenterY=y;}
-    public int getY() {return (int)myCenterY;}
+    public setCenterX (int x) {myCenterX=x;}
+    public int getCenterX() {return (int)myCenterX;}
+    public setCenterY (int y) {myCenterY=y;}
+    public int getCenterY() {return (int)myCenterY;}
     public setDirectionX (double x) {myDirectionX=x;}
     public double getDirectionX() {return (double)myDirectionX;}
     public setDirectionY (double y) {myDirectionY=y;}
